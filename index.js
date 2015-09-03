@@ -31,11 +31,11 @@ app.post('/events', (req, res) => {
   console.log(req.body);
 
   let to = req.body.To;
-  let from = req.body.From;
+  let fromNumber = req.body.From;
   let callStatus = req.body.CallStatus;
   let callSid = req.body.CallSid;
 
-  io.emit('call progress event', { to, from, callStatus, callSid });
+  io.emit('call progress event', { to, fromNumber, callStatus, callSid });
 
   console.log(to, from, callStatus, callSid);
   res.send('Event received');
