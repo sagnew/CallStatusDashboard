@@ -1,0 +1,36 @@
+{
+  "name": "call-status-dashboard",
+  "version": "1.0.0",
+  "description": "A dashboard built with ReactJS and a Node backend using Express/Socket.io to keep track of the status of Twilio phone calls in real time.",
+  "main": "index.js",
+  "dependencies": {
+    "body-parser": "^1.13.3",
+    "express": "^4.13.3",
+    "socket.io": "^1.3.6",
+    "twilio": "^2.3.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sagnew/CallStatusDashboard.git"
+  },
+  "keywords": [
+    "React",
+    "Express",
+    "Node",
+    "Twilio",
+    "Socket.io",
+    "call",
+    "progress",
+    "events"
+  ],
+  "author": "Sam Agnew",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sagnew/CallStatusDashboard/issues"
+  },
+  "homepage": "https://github.com/sagnew/CallStatusDashboard#readme"
+}
