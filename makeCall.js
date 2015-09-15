@@ -1,10 +1,12 @@
-import 'twilio';
-let client = Twilio();
+"use strict";
+
+const twilio = require('twilio');
+const client = twilio();
 
 client.makeCall({
-  url: 'http://gnarly.io/voice.xml',
+  url: 'http://sagnew.ngrok.io/voice',
   to: '+16107616189',
-  from: '+15517774733',
+  from: '+16092514693',
   statusCallback: 'http://sagnew.ngrok.io/events',
   statusCallbackMethod: 'POST',
   statusCallbackEvent: ['initiated', 'ringing', 'answered', 'completed'],
