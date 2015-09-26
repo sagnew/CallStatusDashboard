@@ -1,2 +1,1 @@
-import Hello from './static/hello.jsx';
-import './static/client.js';
+import PhoneCallBox from './static/PhoneCallBox.jsx';

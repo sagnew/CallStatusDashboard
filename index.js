@@ -47,8 +47,6 @@ app.post('/voice', (req, res) => {
 });
 
 app.post('/events', (req, res) => {
-  console.log(req.body);
-
   let to = req.body.To;
   let fromNumber = req.body.From;
   let callStatus = req.body.CallStatus;
@@ -56,6 +54,5 @@ app.post('/events', (req, res) => {
 
   io.emit('status update', { to, fromNumber, callStatus, callSid });
 
-  console.log(to, fromNumber, callStatus, callSid);
   res.send('Event received');
 });
