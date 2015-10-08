@@ -2,12 +2,11 @@
 
 const twilio = require('twilio');
 const client = twilio();
-
 client.makeCall({
-  url: 'http://sagnew.ngrok.io/voice',
-  to: '+16107616189',
-  from: '+16092514693',
-  statusCallback: 'http://sagnew.ngrok.io/events',
+  url: '*ngrok url to your /voice route*',
+  to: '*your phone number*',
+  from: '*your Twilio number*',
+  statusCallback: '*ngrok url to your /events route*',
   statusCallbackMethod: 'POST',
   statusCallbackEvent: ['initiated', 'ringing', 'answered', 'completed'],
 }, (err, call) => {
