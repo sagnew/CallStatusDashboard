@@ -15,8 +15,6 @@ class PhoneCallBox extends React.Component {
 
   _handleStateChange(newCallState) {
 
-    console.log(this);
-    console.log('1');
     let isNewCall = true;
     let phoneCalls = this.state.phoneCalls.map((call) => {
       if (call.callSid === newCallState.callSid) {
@@ -46,7 +44,7 @@ class PhoneCallBox extends React.Component {
       <div className="phoneCallBox">
         <h1>Phone calls</h1>
         <div className="phoneCallList">
-          {phoneCalls}
+          {phoneCalls.reverse()}
         </div>
       </div>
     );
