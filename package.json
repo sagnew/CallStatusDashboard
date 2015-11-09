@@ -9,6 +9,14 @@
     "socket.io": "^1.3.7",
     "twilio": "^2.3.0"
   },
+  "devDependencies": {
+    "babel-core": "^6.0.12",
+    "babel-loader": "^6.0.1",
+    "babel-preset-es2015": "^6.0.12",
+    "babel-preset-react": "^6.0.15",
+    "webpack": "^1.12.1",
+    "webpack-dev-server": "^1.12.1"
+  }
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
