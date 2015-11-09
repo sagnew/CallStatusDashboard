@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
 import PhoneCall from './PhoneCall.jsx';
 
 const socket = io();
@@ -51,4 +52,4 @@ class PhoneCallBox extends React.Component {
   }
 }
 
-React.render(<PhoneCallBox/>, document.body);
+ReactDOM.render(<PhoneCallBox/>, document.getElementById('phone-calls'));
