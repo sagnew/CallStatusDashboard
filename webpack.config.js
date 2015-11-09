@@ -3,10 +3,17 @@ var webpack = require('webpack');
 
 module.exports = {
   entry: './bundleEntry.js',
-  output: { path: __dirname, filename: '/static/bundle.js' },
+  output: { path: __dirname + '/static', filename: 'bundle.js' },
   module: {
     loaders: [
-      { test: /.jsx?$/, loader: 'babel-loader', exclude: /node_modules/ }
+      {
+        test: /.jsx?$/,
+        loader: 'babel-loader',
+        exclude: /node_modules/,
+        query: {
+          presets: ['es2015', 'react']
+        }
+      }
     ]
   },
 };
