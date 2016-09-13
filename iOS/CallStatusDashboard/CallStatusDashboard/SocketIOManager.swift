@@ -15,16 +15,16 @@ class SocketIOManager: NSObject {
     
     override init() {
         super.init()
-        socket.on("status update") { data, ack in
-            print(data)
-            print(ack)
+        socket.on("status update") { dataArray, ack in
+            NSNotificationCenter.defaultCenter()
+                .postNotificationName("callStatusUpdateNotification", object: dataArray[0] as? [String: AnyObject])
+        
         }
     }
     
     func establishConnection() {
         socket.connect()
     }
-    
     
     func closeConnection() {
         socket.disconnect()
