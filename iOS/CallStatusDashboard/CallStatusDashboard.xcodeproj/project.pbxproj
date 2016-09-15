@@ -13,8 +13,6 @@
 		E092FFB91D885A0100D171EC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E092FFB71D885A0100D171EC /* Main.storyboard */; };
 		E092FFBB1D885A0100D171EC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E092FFBA1D885A0100D171EC /* Assets.xcassets */; };
 		E092FFBE1D885A0100D171EC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E092FFBC1D885A0100D171EC /* LaunchScreen.storyboard */; };
-		E093AF661D8871E70029EA48 /* SocketIOManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E093AF651D8871E70029EA48 /* SocketIOManager.swift */; };
-		E093AF681D8888EB0029EA48 /* PhoneCall.swift in Sources */ = {isa = PBXBuildFile; fileRef = E093AF671D8888EB0029EA48 /* PhoneCall.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,8 +26,6 @@
 		E092FFBA1D885A0100D171EC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E092FFBD1D885A0100D171EC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E092FFBF1D885A0100D171EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E093AF651D8871E70029EA48 /* SocketIOManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocketIOManager.swift; sourceTree = "<group>"; };
-		E093AF671D8888EB0029EA48 /* PhoneCall.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhoneCall.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,8 +72,6 @@
 			children = (
 				E092FFB31D885A0100D171EC /* AppDelegate.swift */,
 				E092FFB51D885A0100D171EC /* ViewController.swift */,
-				E093AF651D8871E70029EA48 /* SocketIOManager.swift */,
-				E093AF671D8888EB0029EA48 /* PhoneCall.swift */,
 				E092FFB71D885A0100D171EC /* Main.storyboard */,
 				E092FFBA1D885A0100D171EC /* Assets.xcassets */,
 				E092FFBC1D885A0100D171EC /* LaunchScreen.storyboard */,
@@ -218,9 +212,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E093AF681D8888EB0029EA48 /* PhoneCall.swift in Sources */,
 				E092FFB61D885A0100D171EC /* ViewController.swift in Sources */,
-				E093AF661D8871E70029EA48 /* SocketIOManager.swift in Sources */,
 				E092FFB41D885A0100D171EC /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
