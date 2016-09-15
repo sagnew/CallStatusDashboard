@@ -10,7 +10,7 @@ import UIKit
 
 class ViewController: UITableViewController {
     let phoneCallCellIdentifier = "PhoneCallCell"
-    var phoneCalls: [PhoneCall] = [PhoneCall(callSid: "Hello", toNumber: "", fromNumber: "", callStatus: "")]
+    var phoneCalls: [PhoneCall] = []
 
     @IBOutlet var callStatusTableView: UITableView!
     
