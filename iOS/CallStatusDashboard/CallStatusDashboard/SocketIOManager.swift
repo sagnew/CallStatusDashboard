@@ -11,13 +11,13 @@ import SocketIO
 
 class SocketIOManager: NSObject {
     static let sharedInstance = SocketIOManager()
-    var socket = SocketIOClient(socketURL: NSURL(string: "https://sagnew.ngrok.io")!, config: [.Log(false), .ForcePolling(true)])
+    var socket = SocketIOClient(socketURL: URL(string: "https://sagnew.ngrok.io")!, config: [.log(false), .forcePolling(true)])
     
     override init() {
         super.init()
         socket.on("status update") { dataArray, ack in
-            NSNotificationCenter.defaultCenter()
-                .postNotificationName("callStatusUpdateNotification", object: dataArray[0] as? [String: AnyObject])
+            NotificationCenter.default
+                .post(name: Notification.Name(rawValue: "callStatusUpdateNotification"), object: dataArray[0] as? [String: AnyObject])
         
         }
     }

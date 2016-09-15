@@ -19,7 +19,7 @@ class ViewController: UITableViewController {
         self.callStatusTableView.delegate = self
         self.callStatusTableView.dataSource = self
         
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(ViewController.handleCallStatusUpdateNotification(_:)), name: "callStatusUpdateNotification", object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(ViewController.handleCallStatusUpdateNotification(_:)), name: NSNotification.Name(rawValue: "callStatusUpdateNotification"), object: nil)
     }
 
     override func didReceiveMemoryWarning() {
@@ -28,18 +28,18 @@ class ViewController: UITableViewController {
     }
     
     
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
     
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.phoneCalls.count
     }
     
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier(phoneCallCellIdentifier, forIndexPath: indexPath)
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: phoneCallCellIdentifier, for: indexPath)
         
-        let row = indexPath.row
+        let row = (indexPath as NSIndexPath).row
         let call = phoneCalls[row]
         
         cell.detailTextLabel?.text = "\(call.fromNumber) -> \(call.toNumber): \(call.callStatus)"
@@ -48,10 +48,10 @@ class ViewController: UITableViewController {
         return cell
     }
     
-    func handleCallStatusUpdateNotification(notification: NSNotification) {
+    func handleCallStatusUpdateNotification(_ notification: Notification) {
         if let data = notification.object as? [String: String],
-                callSid = data["callSid"], toNumber = data["to"],
-                fromNumber = data["fromNumber"], callStatus = data["callStatus"] {
+                let callSid = data["callSid"], let toNumber = data["to"],
+                let fromNumber = data["fromNumber"], let callStatus = data["callStatus"] {
             let newPhoneCall = PhoneCall(callSid: callSid, toNumber: toNumber, fromNumber: fromNumber, callStatus: callStatus)
             var isNewCall = true
             
