@@ -6,8 +6,6 @@
 //  Copyright © 2016 Sam Agnew. All rights reserved.
 //
 
-import Foundation
-
 struct PhoneCall {
     let callSid: String
     let toNumber: String

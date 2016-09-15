@@ -51,8 +51,15 @@ app.post('/events', (req, res) => {
   let fromNumber = req.body.From;
   let callStatus = req.body.CallStatus;
   let callSid = req.body.CallSid;
+  console.log(fromNumber)
 
   io.emit('status update', { to, fromNumber, callStatus, callSid });
 
   res.send('Event received');
+});
+
+// Test route for socket events.
+app.get('/test', (req, res) => {
+  io.emit('test', { 'Hello': 'World' });
+  res.send('Hello Socket.io :)');
 });

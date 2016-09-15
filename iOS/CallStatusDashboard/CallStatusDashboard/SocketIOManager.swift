@@ -15,6 +15,11 @@ class SocketIOManager: NSObject {
     
     override init() {
         super.init()
+        
+        socket.on("test") { dataArray, ack in
+            print(dataArray)
+        }
+        
         socket.on("status update") { dataArray, ack in
             NotificationCenter.default
                 .post(name: Notification.Name(rawValue: "callStatusUpdateNotification"), object: dataArray[0] as? [String: AnyObject])
