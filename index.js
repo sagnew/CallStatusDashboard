@@ -57,9 +57,3 @@ app.post('/events', (req, res) => {
 
   res.send('Event received');
 });
-
-// Test route for socket events.
-app.get('/test', (req, res) => {
-  io.emit('test', { 'Hello': 'World' });
-  res.send('Hello Socket.io :)');
-});
