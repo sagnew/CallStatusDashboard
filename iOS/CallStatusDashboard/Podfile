@@ -4,6 +4,6 @@
 use_frameworks!
 
 target 'CallStatusDashboard' do
-    pod 'Socket.IO-Client-Swift', '~> 8.0.0'
+    pod 'Socket.IO-Client-Swift', '~> 8.0.2'
 end
 
