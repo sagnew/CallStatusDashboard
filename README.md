@@ -10,3 +10,5 @@ Part 1: [Setting up React](https://www.twilio.com/blog/2015/08/setting-up-react-
 Part 2: [Using call progress events with NodeJS](https://www.twilio.com/blog/2015/09/monitoring-call-progress-events-with-node-js-and-express.html)
 
 Part 3: [Getting started with Socket.io and adding real time events to the backend of this app.](https://www.twilio.com/blog/2015/10/getting-started-with-socket-io-adding-real-time-events-to-your-node-js-express-app.html)
+
+[Socket.io in Swift](https://www.twilio.com/blog/2016/09/getting-started-with-socket-io-in-swift-on-ios.html) - A tutorial that walks through how to use Socket.io in Swift for iOS development.
